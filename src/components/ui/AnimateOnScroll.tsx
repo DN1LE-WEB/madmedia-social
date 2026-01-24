@@ -41,9 +41,9 @@ export function AnimateOnScroll({
       style={{
         opacity: isVisible ? 1 : 0,
         transform: isVisible ? 'scale(1)' : 'scale(0.95)',
-        transition: shouldAnimate
-          ? `opacity 500ms var(--ease-out-expo), transform 500ms var(--ease-out-expo)`
-          : 'none',
+        transitionProperty: shouldAnimate ? 'opacity, transform' : 'none',
+        transitionDuration: shouldAnimate ? '500ms' : '0ms',
+        transitionTimingFunction: shouldAnimate ? 'var(--ease-out-expo)' : 'ease',
         transitionDelay: shouldAnimate ? `${delay}ms` : '0ms',
       }}
     >
