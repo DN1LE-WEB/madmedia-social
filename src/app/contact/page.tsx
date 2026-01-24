@@ -1,5 +1,19 @@
+import type { Metadata } from 'next'
 import { Container } from '@/components/ui'
 import { ContactForm } from '@/components/contact'
+
+export const metadata: Metadata = {
+  title: 'Contact',
+  description: 'Get in touch with MadMedia for social media management and website services. Email, phone, or use our contact form to start growing your business.',
+  alternates: {
+    canonical: '/contact/',
+  },
+  openGraph: {
+    title: 'Contact | MadMedia',
+    description: 'Get in touch with MadMedia for social media management and website services. Email, phone, or use our contact form to start growing your business.',
+    url: '/contact/',
+  },
+}
 
 export default function ContactPage() {
   return (

@@ -1,4 +1,18 @@
+import type { Metadata } from 'next'
 import { SocialPackages, WebsiteServices, FAQ } from '@/components/services'
+
+export const metadata: Metadata = {
+  title: 'Services',
+  description: 'Social media management packages starting at $300/month. Website design and maintenance services. Starter, Standard, and Premium options available.',
+  alternates: {
+    canonical: '/services/',
+  },
+  openGraph: {
+    title: 'Services | MadMedia',
+    description: 'Social media management packages starting at $300/month. Website design and maintenance services. Starter, Standard, and Premium options available.',
+    url: '/services/',
+  },
+}
 
 export default function ServicesPage() {
   return (
