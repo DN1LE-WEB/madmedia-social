@@ -45,12 +45,12 @@ Plans:
   4. Contact form submits to madmedia56256@gmail.com via Formspree and shows confirmation
   5. All pages render correctly from 320px to 1920px viewport widths
 
-**Plans**: TBD
+**Plans:** 3 plans
 
 Plans:
-- [ ] 02-01: Homepage implementation
-- [ ] 02-02: Services page implementation
-- [ ] 02-03: About and Contact pages
+- [ ] 02-01-PLAN.md — Homepage with editorial hero, services overview, and about preview
+- [ ] 02-02-PLAN.md — Services page with packages, website services, and FAQ
+- [ ] 02-03-PLAN.md — About page with Julie bio and Contact page with Formspree form
 
 ### Phase 3: SEO Implementation
 **Goal**: Implement comprehensive SEO so search engines and social platforms understand and display the site correctly
@@ -92,10 +92,10 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Foundation & Design System | 2/2 | Complete ✓ | 2026-01-24 |
-| 2. Core Pages | 0/3 | Not started | - |
+| 2. Core Pages | 0/3 | Ready | - |
 | 3. SEO Implementation | 0/2 | Not started | - |
 | 4. Polish & Production | 0/2 | Not started | - |
 
 ---
 *Roadmap created: 2026-01-24*
-*Last updated: 2026-01-24 after Phase 1 completion*
+*Last updated: 2026-01-24 after Phase 2 planning*
