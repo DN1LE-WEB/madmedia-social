@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { Container } from '@/components/ui'
 import { ContactForm } from '@/components/contact'
+import { JsonLd } from '@/lib/schema'
 
 export const metadata: Metadata = {
   title: 'Contact',
@@ -15,9 +16,20 @@ export const metadata: Metadata = {
   },
 }
 
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, item: { '@id': 'https://madmedia.social/', name: 'Home' } },
+    { '@type': 'ListItem', position: 2, item: { '@id': 'https://madmedia.social/contact/', name: 'Contact' } },
+  ],
+}
+
 export default function ContactPage() {
   return (
-    <section className="py-section-lg">
+    <>
+      <JsonLd data={breadcrumbSchema} />
+      <section className="py-section-lg">
       <Container>
         <div className="grid grid-cols-1 lg:grid-cols-[2fr_3fr] gap-12 lg:gap-16">
           {/* Left column - Contact info (40%) */}
@@ -58,5 +70,6 @@ export default function ContactPage() {
         </div>
       </Container>
     </section>
+    </>
   )
 }

@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { BioSection } from '@/components/about'
+import { JsonLd } from '@/lib/schema'
 
 export const metadata: Metadata = {
   title: 'About',
@@ -14,6 +15,34 @@ export const metadata: Metadata = {
   },
 }
 
+const personSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name: 'Julie Asfeld',
+  jobTitle: 'Founder & Social Media Specialist',
+  url: 'https://madmedia.social/about/',
+  worksFor: {
+    '@type': 'Organization',
+    name: 'MadMedia LLC',
+  },
+  knowsAbout: ['Social Media Marketing', 'Website Design', 'Small Business Marketing'],
+}
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, item: { '@id': 'https://madmedia.social/', name: 'Home' } },
+    { '@type': 'ListItem', position: 2, item: { '@id': 'https://madmedia.social/about/', name: 'About' } },
+  ],
+}
+
 export default function AboutPage() {
-  return <BioSection />
+  return (
+    <>
+      <JsonLd data={personSchema} />
+      <JsonLd data={breadcrumbSchema} />
+      <BioSection />
+    </>
+  )
 }
