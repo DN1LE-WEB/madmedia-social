@@ -1,4 +1,7 @@
+'use client'
+
 import Image from 'next/image'
+import { AnimateOnScroll } from '@/components/ui'
 
 export function BioSection() {
   return (
@@ -18,9 +21,11 @@ export function BioSection() {
 
           {/* Bio text - 60% on large screens */}
           <div>
-            <h1 className="font-display text-4xl lg:text-5xl">
-              Meet Julie
-            </h1>
+            <AnimateOnScroll>
+              <h1 className="font-display text-4xl lg:text-5xl">
+                Meet Julie
+              </h1>
+            </AnimateOnScroll>
             <p className="mt-8 text-lg text-text-muted leading-relaxed">
               As a small business owner myself, I know how hard it is to find time
               for social media while running everything else. That's why I started

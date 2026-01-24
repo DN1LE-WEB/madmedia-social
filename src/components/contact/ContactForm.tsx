@@ -1,6 +1,7 @@
 'use client'
 
 import { useForm, ValidationError } from '@formspree/react'
+import { AnimateOnScroll } from '@/components/ui'
 
 export function ContactForm() {
   const [state, handleSubmit] = useForm(process.env.NEXT_PUBLIC_FORMSPREE_ID!)
@@ -87,15 +88,18 @@ export function ContactForm() {
       {/* General errors */}
       <ValidationError errors={state.errors} />
 
-      <button
-        type="submit"
-        disabled={state.submitting}
-        className="bg-primary text-background px-8 py-4 font-medium
-                   hover:bg-accent transition-colors duration-300
-                   disabled:opacity-50 disabled:cursor-not-allowed"
-      >
-        {state.submitting ? 'Sending...' : 'Send Message'}
-      </button>
+      <AnimateOnScroll delay={100}>
+        <button
+          type="submit"
+          disabled={state.submitting}
+          className="bg-primary text-background px-8 py-4 font-medium
+                     hover:bg-accent transition-all duration-300
+                     hover:translate-y-[-2px] hover:shadow-lg
+                     disabled:opacity-50 disabled:cursor-not-allowed"
+        >
+          {state.submitting ? 'Sending...' : 'Send Message'}
+        </button>
+      </AnimateOnScroll>
     </form>
   )
 }

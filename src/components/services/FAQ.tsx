@@ -1,3 +1,7 @@
+'use client'
+
+import { AnimateOnScroll } from '@/components/ui'
+
 const faqItems = [
   {
     question: 'How many social media platforms can you manage?',
@@ -35,9 +39,11 @@ export function FAQ() {
   return (
     <section className="bg-background-warm py-section">
       <div className="mx-auto max-w-[var(--width-content)] px-6">
-        <h2 className="font-display text-3xl md:text-4xl mb-12">
-          Frequently Asked Questions
-        </h2>
+        <AnimateOnScroll>
+          <h2 className="font-display text-3xl md:text-4xl mb-12">
+            Frequently Asked Questions
+          </h2>
+        </AnimateOnScroll>
 
         <div className="max-w-3xl space-y-4">
           {faqItems.map((item, index) => (

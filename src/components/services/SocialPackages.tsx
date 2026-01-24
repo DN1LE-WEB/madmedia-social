@@ -1,3 +1,7 @@
+'use client'
+
+import { AnimateOnScroll } from '@/components/ui'
+
 const packages = [
   {
     name: 'Starter',
@@ -41,9 +45,11 @@ export function SocialPackages() {
   return (
     <section className="bg-background-warm py-section">
       <div className="mx-auto max-w-[var(--width-content)] px-6">
-        <h2 className="font-display text-3xl md:text-4xl mb-16">
-          Social Media Management
-        </h2>
+        <AnimateOnScroll>
+          <h2 className="font-display text-3xl md:text-4xl mb-16">
+            Social Media Management
+          </h2>
+        </AnimateOnScroll>
 
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8">
           {packages.map((pkg, index) => (

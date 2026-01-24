@@ -1,5 +1,7 @@
+'use client'
+
 import Link from 'next/link'
-import { Container } from '@/components/ui'
+import { Container, AnimateOnScroll } from '@/components/ui'
 
 const services = [
   {
@@ -20,11 +22,13 @@ export function ServicesPreview() {
   return (
     <section className="py-section bg-background-warm">
       <Container>
-        <h2 className="font-display text-3xl md:text-4xl">What We Do</h2>
+        <AnimateOnScroll>
+          <h2 className="font-display text-3xl md:text-4xl">What We Do</h2>
+        </AnimateOnScroll>
 
         {/* Two-column grid for services - NOT generic cards */}
         <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-12">
-          {services.map((service) => (
+          {services.map((service, index) => (
             <div
               key={service.title}
               className="border-t-2 border-primary/20 pt-6"
@@ -39,13 +43,15 @@ export function ServicesPreview() {
                 {service.description}
               </p>
 
-              <Link
-                href="/services"
-                className="inline-flex items-center gap-2 mt-6 text-primary hover:text-accent transition-colors duration-300 font-medium"
-              >
-                Learn more
-                <span aria-hidden="true">&rarr;</span>
-              </Link>
+              <AnimateOnScroll delay={100 + index * 100}>
+                <Link
+                  href="/services"
+                  className="inline-flex items-center gap-2 mt-6 text-primary hover:text-accent transition-colors duration-300 font-medium"
+                >
+                  Learn more
+                  <span aria-hidden="true">&rarr;</span>
+                </Link>
+              </AnimateOnScroll>
             </div>
           ))}
         </div>

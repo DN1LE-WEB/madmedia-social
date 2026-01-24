@@ -1,3 +1,7 @@
+'use client'
+
+import { AnimateOnScroll } from '@/components/ui'
+
 const services = [
   {
     name: 'Website Design',
@@ -29,9 +33,11 @@ export function WebsiteServices() {
   return (
     <section className="bg-background py-section">
       <div className="mx-auto max-w-[var(--width-content)] px-6">
-        <h2 className="font-display text-3xl md:text-4xl mb-12">
-          Website Services
-        </h2>
+        <AnimateOnScroll>
+          <h2 className="font-display text-3xl md:text-4xl mb-12">
+            Website Services
+          </h2>
+        </AnimateOnScroll>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           {services.map((service) => (
