@@ -14,6 +14,8 @@ export function AnimateOnScroll({
   className = '',
   delay = 0,
 }: AnimateOnScrollProps) {
+  // Start hydrated as false - content visible on SSR for LCP
+  const [isHydrated, setIsHydrated] = useState(false)
   const [prefersReducedMotion, setPrefersReducedMotion] = useState(false)
 
   const { ref, inView } = useInView({
@@ -22,13 +24,14 @@ export function AnimateOnScroll({
   })
 
   useEffect(() => {
+    setIsHydrated(true)
     setPrefersReducedMotion(
       window.matchMedia('(prefers-reduced-motion: reduce)').matches
     )
   }, [])
 
-  // If reduced motion, show immediately without animation
-  const shouldAnimate = !prefersReducedMotion
+  // Before hydration or if reduced motion, show content immediately
+  const shouldAnimate = isHydrated && !prefersReducedMotion
   const isVisible = !shouldAnimate || inView
 
   return (

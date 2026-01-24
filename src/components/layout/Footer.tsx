@@ -14,8 +14,8 @@ export function Footer() {
       <div className="mx-auto max-w-[var(--width-content)] px-6">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
           {/* Contact Info */}
-          <div>
-            <h3 className="font-display text-xl mb-4">Contact</h3>
+          <div role="group" aria-labelledby="footer-contact">
+            <p id="footer-contact" className="font-display text-xl mb-4">Contact</p>
             <address className="not-italic text-background/80 space-y-2 text-sm">
               <p>Madison, MN 56256</p>
               <p>
@@ -38,8 +38,8 @@ export function Footer() {
           </div>
 
           {/* Navigation */}
-          <div>
-            <h3 className="font-display text-xl mb-4">Navigate</h3>
+          <nav aria-labelledby="footer-navigate">
+            <p id="footer-navigate" className="font-display text-xl mb-4">Navigate</p>
             <ul className="space-y-2 text-background/80 text-sm">
               <li>
                 <Link href="/services" className="hover:text-accent transition-colors duration-300">
@@ -57,21 +57,20 @@ export function Footer() {
                 </Link>
               </li>
             </ul>
-          </div>
+          </nav>
 
           {/* Social Links */}
-          <div>
-            <h3 className="font-display text-xl mb-4">Connect</h3>
+          <div role="group" aria-labelledby="footer-connect">
+            <p id="footer-connect" className="font-display text-xl mb-4">Connect</p>
             <ul className="space-y-2 text-background/80 text-sm">
               {socialLinks.map(({ href, label, placeholder }) => (
                 <li key={label}>
                   <a
                     href={href}
                     className="hover:text-accent transition-colors duration-300"
-                    aria-label={placeholder ? `${label} (coming soon)` : label}
                   >
                     {label}
-                    {placeholder && <span className="text-background/40 ml-2">(coming soon)</span>}
+                    {placeholder && <span className="text-background/60 ml-2">(coming soon)</span>}
                   </a>
                 </li>
               ))}
