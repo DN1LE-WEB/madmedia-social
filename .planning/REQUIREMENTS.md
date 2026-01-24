@@ -33,7 +33,7 @@
 
 - [ ] **SEO-01**: Unique title tags per page (50-60 characters)
 - [ ] **SEO-02**: Unique meta descriptions per page (150-160 characters)
-- [ ] **SEO-03**: One H1 per page with semantic HTML structure
+- [x] **SEO-03**: One H1 per page with semantic HTML structure
 - [ ] **SEO-04**: LocalBusiness schema markup on homepage
 - [ ] **SEO-05**: FAQPage schema markup on services page
 - [ ] **SEO-06**: Person schema markup on about page (Julie Asfeld)
@@ -44,7 +44,7 @@
 - [ ] **SEO-11**: Open Graph tags for social sharing on all pages
 - [ ] **SEO-12**: Twitter Card meta tags on all pages
 - [ ] **SEO-13**: Canonical tags on all pages
-- [ ] **SEO-14**: Image alt text on all images
+- [x] **SEO-14**: Image alt text on all images
 
 ### Technical
 
@@ -99,7 +99,7 @@
 | DSGN-09 | Phase 1 | Complete |
 | SEO-01 | Phase 3 | Pending |
 | SEO-02 | Phase 3 | Pending |
-| SEO-03 | Phase 3 | Pending |
+| SEO-03 | Phase 2 | Complete |
 | SEO-04 | Phase 3 | Pending |
 | SEO-05 | Phase 3 | Pending |
 | SEO-06 | Phase 3 | Pending |
@@ -110,7 +110,7 @@
 | SEO-11 | Phase 3 | Pending |
 | SEO-12 | Phase 3 | Pending |
 | SEO-13 | Phase 3 | Pending |
-| SEO-14 | Phase 3 | Pending |
+| SEO-14 | Phase 2 | Complete |
 | TECH-01 | Phase 1 | Complete |
 | TECH-02 | Phase 1 | Complete |
 | TECH-03 | Phase 1 | Complete |
@@ -126,4 +126,5 @@
 
 ---
 *Requirements defined: 2026-01-24*
-*Last updated: 2026-01-24 after Phase 1 completion*
+*Last updated: 2026-01-24 after Phase 3 plan revision*
+*Note: SEO-03 (H1 per page) and SEO-14 (image alt text) were addressed during Phase 2 page creation*
