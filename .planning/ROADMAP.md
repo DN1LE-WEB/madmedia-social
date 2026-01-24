@@ -28,11 +28,11 @@ This roadmap delivers a custom Next.js website for MadMedia LLC that looks unmis
   4. Footer component shows contact info and placeholder social links
   5. Design tokens (colors, spacing, typography scales) are defined and documented
 
-**Plans**: TBD
+**Plans:** 2 plans
 
 Plans:
-- [ ] 01-01: Project setup and configuration
-- [ ] 01-02: Design system and shared components
+- [ ] 01-01-PLAN.md — Project setup with Next.js 15, TypeScript, Tailwind v4, fonts, and design tokens
+- [ ] 01-02-PLAN.md — Navigation and Footer layout components
 
 ### Phase 2: Core Pages
 **Goal**: Build all four pages with editorial layouts that demonstrate intentional design choices
