@@ -17,7 +17,7 @@ export function Button({
   disabled,
   className = ''
 }: ButtonProps) {
-  const baseStyles = 'inline-block px-8 py-4 font-medium transition-colors duration-300'
+  const baseStyles = 'inline-block px-8 py-4 font-medium transition-all duration-300 hover:translate-y-[-2px] hover:shadow-lg'
   const variants = {
     primary: 'bg-primary text-background hover:bg-accent',
     secondary: 'border border-primary text-primary hover:bg-primary hover:text-background'
