@@ -5,36 +5,36 @@
 See: .planning/PROJECT.md (updated 2026-01-24)
 
 **Core value:** The site must look unmistakably human-designed — a designer would believe another designer made it.
-**Current focus:** Phase 2 - Core Pages (Homepage, Services complete)
+**Current focus:** Phase 2 Complete - Ready for Phase 3 (SEO & Analytics)
 
 ## Current Position
 
-Phase: 2 of 4 (Core Pages)
-Plan: 2 of 3 in current phase
-Status: In progress
-Last activity: 2026-01-24 — Completed 02-02-PLAN.md
+Phase: 2 of 4 (Core Pages) - COMPLETE
+Plan: 3 of 3 in current phase
+Status: Phase complete
+Last activity: 2026-01-24 — Completed 02-03-PLAN.md
 
-Progress: [####......] 44%
+Progress: [#####.....] 56%
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 4
-- Average duration: 3m 12s
-- Total execution time: 0.21 hours
+- Total plans completed: 5
+- Average duration: 3m 06s
+- Total execution time: 0.26 hours
 
 **By Phase:**
 
 | Phase | Plans | Total | Avg/Plan |
 |-------|-------|-------|----------|
 | 1 | 2/2 | 7m 35s | 3m 48s |
-| 2 | 2/3 | 5m 13s | 2m 37s |
+| 2 | 3/3 | 8m 13s | 2m 44s |
 | 3 | 0/2 | - | - |
 | 4 | 0/2 | - | - |
 
 **Recent Trend:**
-- Last 5 plans: 01-01 (4m 23s), 01-02 (3m 12s), 02-01 (2m 44s), 02-02 (2m 29s)
-- Trend: Improving
+- Last 5 plans: 01-02 (3m 12s), 02-01 (2m 44s), 02-02 (2m 29s), 02-03 (3m)
+- Trend: Stable
 
 *Updated after each plan completion*
 
@@ -57,6 +57,9 @@ Recent decisions affecting current work:
 - FAQ uses native details/summary (accessible, no JS)
 - Standard package emphasized with elevated styling
 - 12-column grid for pricing (editorial, not uniform cards)
+- Formspree free tier (50/month) sufficient for launch
+- 40/60 asymmetric layout for About and Contact pages
+- Phone field optional in contact form
 
 ### Pending Todos
 
@@ -68,8 +71,8 @@ None.
 
 ## Session Continuity
 
-Last session: 2026-01-24 20:35 UTC
-Stopped at: Completed 02-02-PLAN.md (Services page)
+Last session: 2026-01-24 20:47 UTC
+Stopped at: Completed 02-03-PLAN.md (About & Contact pages)
 Resume file: None
 
 ---
