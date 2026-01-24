@@ -1,1 +1,35 @@
 @import 'tailwindcss';
+
+@theme {
+  /* Typography - Character fonts that don't look AI-generated */
+  --font-display: var(--font-fraunces), Georgia, serif;
+  --font-body: var(--font-dm-sans), system-ui, sans-serif;
+
+  /* Colors - MadMedia brand palette */
+  --color-primary: #1a1a1a;
+  --color-primary-soft: #2d2d2d;
+  --color-accent: #c9a227;
+  --color-accent-light: #e8d48a;
+  --color-accent-dark: #9a7b1c;
+  --color-background: #fafafa;
+  --color-background-warm: #f5f3ef;
+  --color-text: #1a1a1a;
+  --color-text-muted: #6b6b6b;
+
+  /* Spacing - Dramatic whitespace (120px+) */
+  --spacing-section: 7.5rem;
+  --spacing-section-sm: 5rem;
+  --spacing-section-lg: 10rem;
+
+  /* Layout */
+  --width-content: 75rem;
+
+  /* Animation - Custom easing (NOT default ease or bounce) */
+  --ease-out-expo: cubic-bezier(0.19, 1, 0.22, 1);
+  --ease-out-quart: cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+/* Base body styling */
+body {
+  @apply font-body text-text bg-background antialiased;
+}
