@@ -11,7 +11,7 @@ This roadmap delivers a custom Next.js website for MadMedia LLC that looks unmis
 - Decimal phases (2.1, 2.2): Urgent insertions (marked with INSERTED)
 
 - [x] **Phase 1: Foundation & Design System** - Project scaffolding, typography, and reusable components ✓
-- [ ] **Phase 2: Core Pages** - Homepage, Services, About, and Contact pages with editorial layouts
+- [x] **Phase 2: Core Pages** - Homepage, Services, About, and Contact pages with editorial layouts ✓
 - [ ] **Phase 3: SEO Implementation** - Meta tags, schema markup, sitemap, and social cards
 - [ ] **Phase 4: Polish & Production** - Animations, performance optimization, and deployment readiness
 
@@ -48,9 +48,9 @@ Plans:
 **Plans:** 3 plans
 
 Plans:
-- [ ] 02-01-PLAN.md — Homepage with editorial hero, services overview, and about preview
-- [ ] 02-02-PLAN.md — Services page with packages, website services, and FAQ
-- [ ] 02-03-PLAN.md — About page with Julie bio and Contact page with Formspree form
+- [x] 02-01-PLAN.md — Homepage with editorial hero, services overview, and about preview ✓
+- [x] 02-02-PLAN.md — Services page with packages, website services, and FAQ ✓
+- [x] 02-03-PLAN.md — About page with Julie bio and Contact page with Formspree form ✓
 
 ### Phase 3: SEO Implementation
 **Goal**: Implement comprehensive SEO so search engines and social platforms understand and display the site correctly
@@ -62,11 +62,11 @@ Plans:
   3. sitemap.xml and robots.txt exist and are accurate
   4. Social sharing preview (Open Graph + Twitter Cards) displays correctly when URL is shared
 
-**Plans**: TBD
+**Plans:** 2 plans
 
 Plans:
-- [ ] 03-01: Meta tags, sitemap, and robots.txt
-- [ ] 03-02: Schema markup implementation
+- [ ] 03-01-PLAN.md — Meta tags, Open Graph, Twitter Cards, sitemap, and robots.txt
+- [ ] 03-02-PLAN.md — JSON-LD schema markup (LocalBusiness, FAQPage, Person, BreadcrumbList)
 
 ### Phase 4: Polish & Production
 **Goal**: Add crafted animations and ensure the site is production-ready with excellent performance
@@ -92,10 +92,10 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Foundation & Design System | 2/2 | Complete ✓ | 2026-01-24 |
-| 2. Core Pages | 0/3 | Ready | - |
-| 3. SEO Implementation | 0/2 | Not started | - |
+| 2. Core Pages | 3/3 | Complete ✓ | 2026-01-24 |
+| 3. SEO Implementation | 0/2 | Ready | - |
 | 4. Polish & Production | 0/2 | Not started | - |
 
 ---
 *Roadmap created: 2026-01-24*
-*Last updated: 2026-01-24 after Phase 2 planning*
+*Last updated: 2026-01-24 after Phase 3 planning*
