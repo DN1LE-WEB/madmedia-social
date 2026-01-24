@@ -78,11 +78,11 @@ Plans:
   3. Lighthouse Performance score is 90+ and Accessibility score is 95+
   4. No console errors in production build
 
-**Plans**: TBD
+**Plans:** 2 plans
 
 Plans:
-- [ ] 04-01: Animations and microinteractions
-- [ ] 04-02: Performance optimization and static export
+- [ ] 04-01-PLAN.md — AnimateOnScroll component, Button hover effects, and entrance animations on all pages
+- [ ] 04-02-PLAN.md — Reduced motion accessibility, Lighthouse audits, and production verification
 
 ## Progress
 
@@ -98,4 +98,4 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4
 
 ---
 *Roadmap created: 2026-01-24*
-*Last updated: 2026-01-24 after Phase 3 execution*
+*Last updated: 2026-01-24 after Phase 4 planning*
