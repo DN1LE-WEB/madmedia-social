@@ -2,7 +2,7 @@
 
 @theme {
   /* Typography - Character fonts that don't look AI-generated */
-  --font-display: var(--font-fraunces), Georgia, serif;
+  --font-display: var(--font-playfair), Georgia, serif;
   --font-body: var(--font-dm-sans), system-ui, sans-serif;
 
   /* Colors - MadMedia brand palette */

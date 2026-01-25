@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { fraunces, dmSans } from '@/lib/fonts'
+import { playfair, dmSans } from '@/lib/fonts'
 import { Navigation, Footer } from '@/components/layout'
 import '@/styles/globals.css'
 
@@ -26,7 +26,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={`${fraunces.variable} ${dmSans.variable}`}>
+    <html lang="en" className={`${playfair.variable} ${dmSans.variable}`}>
       <body className="flex flex-col min-h-screen">
         <Navigation />
         <main className="flex-1">{children}</main>

@@ -1,5 +1,6 @@
 'use client'
 
+import Image from 'next/image'
 import { Container, Button, AnimateOnScroll } from '@/components/ui'
 
 export function AboutPreview() {
@@ -32,9 +33,16 @@ export function AboutPreview() {
             </AnimateOnScroll>
           </div>
 
-          {/* Right side - 40% on desktop, decorative placeholder */}
+          {/* Right side - 40% on desktop */}
           <div className="order-first lg:order-last">
-            <div className="aspect-[4/5] bg-background-warm" />
+            <div className="relative aspect-square">
+              <Image
+                src="/julie-promo.jpg"
+                alt="Julie Asfeld - MadMedia Social Media Management"
+                fill
+                className="object-contain"
+              />
+            </div>
           </div>
         </div>
       </Container>

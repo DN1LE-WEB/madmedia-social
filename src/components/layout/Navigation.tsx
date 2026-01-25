@@ -15,9 +15,9 @@ export function Navigation() {
   const pathname = usePathname()
 
   return (
-    <header className="py-6 border-b border-primary/10">
+    <header className="border-b border-primary/10">
       <nav className="mx-auto max-w-[var(--width-content)] px-6 flex items-center justify-between">
-        <Link href="/" className="relative h-12 w-40">
+        <Link href="/" className="relative h-60 w-[480px]">
           <Image
             src="/logo.png"
             alt="MadMedia"
