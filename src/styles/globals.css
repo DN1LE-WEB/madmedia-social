@@ -34,6 +34,125 @@ body {
   @apply font-body text-text bg-background antialiased;
 }
 
+/* ============================================
+   Shimmer / Sparkle Background Effect
+   ============================================ */
+
+.shimmer-container {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+/* Soft radial gradient for subtle depth */
+.shimmer-gradient {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    ellipse 80% 50% at 50% 0%,
+    rgba(201, 162, 39, 0.03) 0%,
+    transparent 50%
+  );
+}
+
+/* Gold shimmer particles */
+.shimmer-particle {
+  position: absolute;
+  width: 3px;
+  height: 3px;
+  background: radial-gradient(
+    circle,
+    rgba(201, 162, 39, 0.6) 0%,
+    rgba(201, 162, 39, 0.2) 50%,
+    transparent 100%
+  );
+  border-radius: 50%;
+  opacity: 0;
+  animation: shimmer-float 20s ease-in-out infinite;
+}
+
+/* Staggered particle positions and timing */
+.shimmer-particle-1 {
+  left: 10%;
+  top: 20%;
+  animation-delay: 0s;
+  animation-duration: 25s;
+}
+
+.shimmer-particle-2 {
+  left: 85%;
+  top: 15%;
+  animation-delay: 3s;
+  animation-duration: 22s;
+}
+
+.shimmer-particle-3 {
+  left: 30%;
+  top: 60%;
+  animation-delay: 7s;
+  animation-duration: 28s;
+}
+
+.shimmer-particle-4 {
+  left: 70%;
+  top: 40%;
+  animation-delay: 11s;
+  animation-duration: 24s;
+}
+
+.shimmer-particle-5 {
+  left: 50%;
+  top: 80%;
+  animation-delay: 5s;
+  animation-duration: 26s;
+}
+
+.shimmer-particle-6 {
+  left: 20%;
+  top: 45%;
+  animation-delay: 14s;
+  animation-duration: 23s;
+}
+
+.shimmer-particle-7 {
+  left: 90%;
+  top: 70%;
+  animation-delay: 9s;
+  animation-duration: 27s;
+}
+
+.shimmer-particle-8 {
+  left: 60%;
+  top: 10%;
+  animation-delay: 17s;
+  animation-duration: 21s;
+}
+
+@keyframes shimmer-float {
+  0% {
+    opacity: 0;
+    transform: translateY(0) scale(0.5);
+  }
+  10% {
+    opacity: 0.7;
+    transform: translateY(-10px) scale(1);
+  }
+  50% {
+    opacity: 0.4;
+    transform: translateY(-30px) scale(0.8);
+  }
+  90% {
+    opacity: 0.6;
+    transform: translateY(-50px) scale(1.1);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-60px) scale(0.5);
+  }
+}
+
 /* Respect user's motion preferences */
 @media (prefers-reduced-motion: reduce) {
   *,
@@ -43,5 +162,9 @@ body {
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
+  }
+
+  .shimmer-container {
+    display: none;
   }
 }

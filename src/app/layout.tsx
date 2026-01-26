@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { playfair, dmSans } from '@/lib/fonts'
 import { Navigation, Footer } from '@/components/layout'
+import { Shimmer } from '@/components/ui'
 import '@/styles/globals.css'
 
 export const metadata: Metadata = {
@@ -28,8 +29,9 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${playfair.variable} ${dmSans.variable}`}>
       <body className="flex flex-col min-h-screen">
+        <Shimmer />
         <Navigation />
-        <main className="flex-1">{children}</main>
+        <main className="flex-1 relative z-10">{children}</main>
         <Footer />
       </body>
     </html>
