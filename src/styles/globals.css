@@ -16,10 +16,10 @@
   --color-text: #1a1a1a;
   --color-text-muted: #6b6b6b;
 
-  /* Spacing - Dramatic whitespace (120px+) */
-  --spacing-section: 7.5rem;
-  --spacing-section-sm: 5rem;
-  --spacing-section-lg: 10rem;
+  /* Spacing - Refined whitespace */
+  --spacing-section: 5rem;
+  --spacing-section-sm: 3rem;
+  --spacing-section-lg: 6rem;
 
   /* Layout */
   --width-content: 75rem;

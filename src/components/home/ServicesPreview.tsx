@@ -8,13 +8,13 @@ const services = [
     title: 'Social Media Management',
     description:
       'From content creation to community engagement, we handle your social presence so you can focus on running your business.',
-    icon: 'SM',
+    number: '01',
   },
   {
     title: 'Website Services',
     description:
       'Custom, mobile-responsive websites designed to convert visitors into customers, plus ongoing maintenance to keep everything running smoothly.',
-    icon: 'WS',
+    number: '02',
   },
 ]
 
@@ -26,32 +26,44 @@ export function ServicesPreview() {
           <h2 className="font-display text-3xl md:text-4xl">What We Do</h2>
         </AnimateOnScroll>
 
-        {/* Two-column grid for services - NOT generic cards */}
-        <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-12">
+        {/* Editorial two-column layout */}
+        <div className="mt-10 grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-10">
           {services.map((service, index) => (
             <div
               key={service.title}
-              className="border-t-2 border-primary/20 pt-6"
+              className="group relative"
             >
-              {/* Icon placeholder */}
-              <span className="inline-block w-12 h-12 bg-primary text-background font-display text-lg flex items-center justify-center mb-4">
-                {service.icon}
-              </span>
+              {/* Large editorial number with gold accent */}
+              <div className="flex items-start gap-6">
+                <span className="font-display text-6xl md:text-7xl text-accent/20 leading-none select-none group-hover:text-accent/40 transition-colors duration-500">
+                  {service.number}
+                </span>
 
-              <h3 className="font-display text-xl">{service.title}</h3>
-              <p className="mt-4 text-text-muted leading-relaxed">
-                {service.description}
-              </p>
+                <div className="pt-2 flex-1">
+                  {/* Gold accent line */}
+                  <div className="w-12 h-0.5 bg-accent mb-4" />
 
-              <AnimateOnScroll delay={100 + index * 100}>
-                <Link
-                  href="/services"
-                  className="inline-flex items-center gap-2 mt-6 text-primary hover:text-accent transition-colors duration-300 font-medium"
-                >
-                  Learn more
-                  <span aria-hidden="true">&rarr;</span>
-                </Link>
-              </AnimateOnScroll>
+                  <h3 className="font-display text-xl md:text-2xl">{service.title}</h3>
+                  <p className="mt-4 text-text-muted leading-relaxed">
+                    {service.description}
+                  </p>
+
+                  <AnimateOnScroll delay={100 + index * 100}>
+                    <Link
+                      href="/services"
+                      className="inline-flex items-center gap-2 mt-6 text-primary hover:text-accent transition-colors duration-300 font-medium group/link"
+                    >
+                      <span>Learn more</span>
+                      <span
+                        aria-hidden="true"
+                        className="transform group-hover/link:translate-x-1 transition-transform duration-300"
+                      >
+                        &rarr;
+                      </span>
+                    </Link>
+                  </AnimateOnScroll>
+                </div>
+              </div>
             </div>
           ))}
         </div>

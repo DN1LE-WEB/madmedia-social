@@ -5,10 +5,10 @@ import { Container, Button, AnimateOnScroll } from '@/components/ui'
 
 export function AboutPreview() {
   return (
-    <section className="py-section-lg">
+    <section className="py-section">
       <Container>
         {/* Asymmetric 60/40 layout */}
-        <div className="grid grid-cols-1 lg:grid-cols-[3fr_2fr] gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-[3fr_2fr] gap-8 lg:gap-12 items-center">
           {/* Left side - 60% on desktop */}
           <div>
             <AnimateOnScroll>

@@ -7,10 +7,10 @@ export function Hero() {
   return (
     <>
       {/* === ORIGINAL HERO (active) === */}
-      <section className="py-section-lg">
+      <section className="py-section">
         <Container>
           <AnimateOnScroll>
-            <h1 className="font-display text-5xl md:text-7xl lg:text-8xl leading-[0.9] tracking-tight">
+            <h1 className="font-display text-4xl md:text-6xl lg:text-7xl leading-[0.95] tracking-tight">
               MadMedia
               <br />
               <span className="text-accent">Social Media That Works</span>
@@ -18,12 +18,12 @@ export function Hero() {
           </AnimateOnScroll>
 
           <AnimateOnScroll delay={100}>
-            <p className="mt-8 text-xl md:text-2xl text-text-muted max-w-xl ml-auto text-right">
+            <p className="mt-6 text-lg md:text-xl text-text-muted max-w-md ml-auto text-right">
               Helping small businesses in Madison, MN and beyond grow their online presence.
             </p>
           </AnimateOnScroll>
 
-          <div className="mt-12 h-px bg-primary/20 w-2/3" />
+          <div className="mt-8 h-px bg-primary/20 w-1/2" />
         </Container>
       </section>
 
