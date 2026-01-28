@@ -4,7 +4,7 @@ import { useForm, ValidationError } from '@formspree/react'
 import { AnimateOnScroll } from '@/components/ui'
 
 export function ContactForm() {
-  const [state, handleSubmit] = useForm(process.env.NEXT_PUBLIC_FORMSPREE_ID!)
+  const [state, handleSubmit] = useForm('xykevppo')
 
   if (state.succeeded) {
     return (
