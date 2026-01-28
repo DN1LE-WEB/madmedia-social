@@ -1,10 +1,6 @@
 import Link from 'next/link'
-
-const socialLinks = [
-  { href: '#', label: 'Facebook', placeholder: true },
-  { href: '#', label: 'Instagram', placeholder: true },
-  { href: '#', label: 'LinkedIn', placeholder: true },
-]
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faFacebook } from '@fortawesome/free-brands-svg-icons'
 
 export function Footer() {
   const currentYear = new Date().getFullYear()
@@ -62,19 +58,16 @@ export function Footer() {
           {/* Social Links */}
           <div role="group" aria-labelledby="footer-connect">
             <p id="footer-connect" className="font-display text-xl mb-4">Connect</p>
-            <ul className="space-y-2 text-background/80 text-sm">
-              {socialLinks.map(({ href, label, placeholder }) => (
-                <li key={label}>
-                  <a
-                    href={href}
-                    className="hover:text-accent transition-colors duration-300"
-                  >
-                    {label}
-                    {placeholder && <span className="text-background/60 ml-2">(coming soon)</span>}
-                  </a>
-                </li>
-              ))}
-            </ul>
+            <a
+              href="https://www.facebook.com/profile.php?id=61567329454572#"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-background/80 hover:text-accent transition-colors duration-300 text-sm"
+              aria-label="Follow us on Facebook"
+            >
+              <FontAwesomeIcon icon={faFacebook} className="w-5 h-5" />
+              <span>Facebook</span>
+            </a>
           </div>
         </div>
 
