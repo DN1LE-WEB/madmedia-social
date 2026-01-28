@@ -38,96 +38,98 @@ body {
    Shimmer / Sparkle Background Effect
    ============================================ */
 
-.shimmer-container {
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  z-index: 50;
-  overflow: hidden;
-}
+@layer components {
+  .shimmer-container {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 50;
+    overflow: hidden;
+  }
 
-/* Soft radial gradient for subtle depth */
-.shimmer-gradient {
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(
-    ellipse 80% 50% at 50% 0%,
-    rgba(201, 162, 39, 0.03) 0%,
-    transparent 50%
-  );
-}
+  /* Soft radial gradient for subtle depth */
+  .shimmer-gradient {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(
+      ellipse 80% 50% at 50% 0%,
+      rgba(201, 162, 39, 0.03) 0%,
+      transparent 50%
+    );
+  }
 
-/* Gold shimmer particles - subtle overlay */
-.shimmer-particle {
-  position: absolute;
-  width: 6px;
-  height: 6px;
-  background: radial-gradient(
-    circle,
-    rgba(201, 162, 39, 0.5) 0%,
-    rgba(201, 162, 39, 0.2) 50%,
-    transparent 100%
-  );
-  border-radius: 50%;
-  box-shadow: 0 0 10px 4px rgba(201, 162, 39, 0.15);
-  animation: shimmer-float 15s ease-in-out infinite;
-}
+  /* Gold shimmer particles - subtle overlay */
+  .shimmer-particle {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background: radial-gradient(
+      circle,
+      rgba(201, 162, 39, 0.5) 0%,
+      rgba(201, 162, 39, 0.2) 50%,
+      transparent 100%
+    );
+    border-radius: 50%;
+    box-shadow: 0 0 10px 4px rgba(201, 162, 39, 0.15);
+    animation: shimmer-float 15s ease-in-out infinite;
+  }
 
-/* Staggered particle positions and timing */
-.shimmer-particle-1 {
-  left: 10%;
-  top: 20%;
-  animation-delay: 0s;
-  animation-duration: 12s;
-}
+  /* Staggered particle positions and timing */
+  .shimmer-particle-1 {
+    left: 10%;
+    top: 20%;
+    animation-delay: 0s;
+    animation-duration: 12s;
+  }
 
-.shimmer-particle-2 {
-  left: 85%;
-  top: 15%;
-  animation-delay: 1.5s;
-  animation-duration: 14s;
-}
+  .shimmer-particle-2 {
+    left: 85%;
+    top: 15%;
+    animation-delay: 1.5s;
+    animation-duration: 14s;
+  }
 
-.shimmer-particle-3 {
-  left: 30%;
-  top: 60%;
-  animation-delay: 3s;
-  animation-duration: 16s;
-}
+  .shimmer-particle-3 {
+    left: 30%;
+    top: 60%;
+    animation-delay: 3s;
+    animation-duration: 16s;
+  }
 
-.shimmer-particle-4 {
-  left: 70%;
-  top: 40%;
-  animation-delay: 4.5s;
-  animation-duration: 13s;
-}
+  .shimmer-particle-4 {
+    left: 70%;
+    top: 40%;
+    animation-delay: 4.5s;
+    animation-duration: 13s;
+  }
 
-.shimmer-particle-5 {
-  left: 50%;
-  top: 80%;
-  animation-delay: 2s;
-  animation-duration: 15s;
-}
+  .shimmer-particle-5 {
+    left: 50%;
+    top: 80%;
+    animation-delay: 2s;
+    animation-duration: 15s;
+  }
 
-.shimmer-particle-6 {
-  left: 20%;
-  top: 45%;
-  animation-delay: 6s;
-  animation-duration: 14s;
-}
+  .shimmer-particle-6 {
+    left: 20%;
+    top: 45%;
+    animation-delay: 6s;
+    animation-duration: 14s;
+  }
 
-.shimmer-particle-7 {
-  left: 90%;
-  top: 70%;
-  animation-delay: 3.5s;
-  animation-duration: 16s;
-}
+  .shimmer-particle-7 {
+    left: 90%;
+    top: 70%;
+    animation-delay: 3.5s;
+    animation-duration: 16s;
+  }
 
-.shimmer-particle-8 {
-  left: 60%;
-  top: 10%;
-  animation-delay: 5s;
-  animation-duration: 13s;
+  .shimmer-particle-8 {
+    left: 60%;
+    top: 10%;
+    animation-delay: 5s;
+    animation-duration: 13s;
+  }
 }
 
 @keyframes shimmer-float {
