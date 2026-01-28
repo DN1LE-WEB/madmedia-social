@@ -1,0 +1,7 @@
+{
+  "name": "madmedia-social",
+  "compatibility_date": "2025-01-27",
+  "assets": {
+    "directory": "./out"
+  }
+}
