@@ -13,7 +13,7 @@ const services = [
       'SEO-ready structure',
       'Training session included',
     ],
-    pricing: 'Starting at $149',
+    pricing: 'Starting at $499',
   },
   {
     name: 'Website Maintenance',
@@ -25,7 +25,7 @@ const services = [
       'Regular backups',
       'Technical support',
     ],
-    pricing: 'Starting at $15/month',
+    pricing: 'Starting at $25/month',
   },
 ]
 
