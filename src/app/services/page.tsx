@@ -79,11 +79,86 @@ const breadcrumbSchema = {
   ],
 }
 
+const orgRef = { '@id': 'https://madmedia.social/#organization' }
+const areaServed = { '@type': 'State', name: 'Minnesota' }
+
+const starterServiceSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  name: 'Social Media Management - Starter',
+  description: '8 posts per month on 1 platform, with basic content creation and community engagement.',
+  serviceType: 'Social Media Management',
+  provider: orgRef,
+  areaServed,
+  offers: {
+    '@type': 'Offer',
+    price: '300.00',
+    priceCurrency: 'USD',
+    priceSpecification: {
+      '@type': 'UnitPriceSpecification',
+      price: '300.00',
+      priceCurrency: 'USD',
+      unitText: 'MONTH',
+    },
+    url: 'https://madmedia.social/services/',
+    availability: 'https://schema.org/InStock',
+  },
+}
+
+const standardServiceSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  name: 'Social Media Management - Standard',
+  description: '16 posts per month on 2 platforms, advanced content creation, community engagement, and monthly analytics report.',
+  serviceType: 'Social Media Management',
+  provider: orgRef,
+  areaServed,
+  offers: {
+    '@type': 'Offer',
+    price: '600.00',
+    priceCurrency: 'USD',
+    priceSpecification: {
+      '@type': 'UnitPriceSpecification',
+      price: '600.00',
+      priceCurrency: 'USD',
+      unitText: 'MONTH',
+    },
+    url: 'https://madmedia.social/services/',
+    availability: 'https://schema.org/InStock',
+  },
+}
+
+const premiumServiceSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  name: 'Social Media Management - Premium',
+  description: '24 posts per month on 3 platforms, comprehensive content strategy, strategic engagement, weekly analytics report, and priority support.',
+  serviceType: 'Social Media Management',
+  provider: orgRef,
+  areaServed,
+  offers: {
+    '@type': 'Offer',
+    price: '900.00',
+    priceCurrency: 'USD',
+    priceSpecification: {
+      '@type': 'UnitPriceSpecification',
+      price: '900.00',
+      priceCurrency: 'USD',
+      unitText: 'MONTH',
+    },
+    url: 'https://madmedia.social/services/',
+    availability: 'https://schema.org/InStock',
+  },
+}
+
 export default function ServicesPage() {
   return (
     <>
       <JsonLd data={faqSchema} />
       <JsonLd data={breadcrumbSchema} />
+      <JsonLd data={starterServiceSchema} />
+      <JsonLd data={standardServiceSchema} />
+      <JsonLd data={premiumServiceSchema} />
       {/* Hero Section */}
       <section className="py-section-lg">
         <div className="mx-auto max-w-[var(--width-content)] px-6">

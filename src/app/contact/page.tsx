@@ -25,10 +25,30 @@ const breadcrumbSchema = {
   ],
 }
 
+const contactPageSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'ContactPage',
+  url: 'https://madmedia.social/contact/',
+  mainEntity: {
+    '@id': 'https://madmedia.social/#organization',
+    contactPoint: [
+      {
+        '@type': 'ContactPoint',
+        contactType: 'customer service',
+        telephone: '+1-320-204-5840',
+        email: 'madmedia56256@gmail.com',
+        areaServed: 'US-MN',
+        availableLanguage: 'en',
+      },
+    ],
+  },
+}
+
 export default function ContactPage() {
   return (
     <>
       <JsonLd data={breadcrumbSchema} />
+      <JsonLd data={contactPageSchema} />
       <section className="py-section-lg">
       <Container>
         <div className="grid grid-cols-1 lg:grid-cols-[2fr_3fr] gap-12 lg:gap-16">

@@ -16,9 +16,12 @@ export const metadata: Metadata = {
 const localBusinessSchema = {
   '@context': 'https://schema.org',
   '@type': 'LocalBusiness',
+  '@id': 'https://madmedia.social/#organization',
   name: 'MadMedia LLC',
   description: 'Professional social media management and website services for small businesses.',
   url: 'https://madmedia.social',
+  logo: 'https://madmedia.social/logo.png',
+  image: 'https://madmedia.social/julie.jpg',
   telephone: '320-204-5840',
   email: 'madmedia56256@gmail.com',
   address: {

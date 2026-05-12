@@ -22,8 +22,7 @@ const personSchema = {
   jobTitle: 'Founder & Social Media Specialist',
   url: 'https://madmedia.social/about/',
   worksFor: {
-    '@type': 'Organization',
-    name: 'MadMedia LLC',
+    '@id': 'https://madmedia.social/#organization',
   },
   knowsAbout: ['Social Media Marketing', 'Website Design', 'Small Business Marketing'],
 }
