@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "screenshots": "node scripts/capture-screenshots.mjs"
   },
   "dependencies": {
     "@formspree/react": "^3.0.0",
@@ -25,5 +26,8 @@
     "react-intersection-observer": "^10.0.2",
     "tailwindcss": "^4.1.18",
     "typescript": "^5.9.3"
+  },
+  "devDependencies": {
+    "playwright": "^1.61.1"
   }
 }
