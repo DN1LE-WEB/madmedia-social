@@ -13,7 +13,8 @@ import { fileURLToPath } from 'node:url'
 import { chromium } from 'playwright'
 
 const SITES = [
-  { slug: 'isd2342', url: 'https://isd2342.org' },
+  // videoSeekSeconds: pause the hero video on this frame before capturing
+  { slug: 'isd2342', url: 'https://isd2342.org', videoSeekSeconds: 15 },
   { slug: 'rockin-w-hatbar', url: 'https://rockin-w-hatbar.com' },
   { slug: 'four-pawsresort', url: 'https://four-pawsresort.com' },
   { slug: 'themainmadison', url: 'https://themainmadison.com' },
@@ -47,7 +48,27 @@ async function dismissPopups(page) {
   }
 }
 
-async function capture(browser, { slug, url }) {
+// Pause the page's hero video on the frame at `seconds` for a nicer still
+async function seekHeroVideo(page, seconds) {
+  try {
+    await page.evaluate(async (t) => {
+      const video = document.querySelector('video')
+      if (!video || !video.duration) return
+      video.pause()
+      const seeked = new Promise((resolve) => {
+        video.addEventListener('seeked', resolve, { once: true })
+        setTimeout(resolve, 3_000)
+      })
+      video.currentTime = Math.min(t, video.duration - 0.1)
+      await seeked
+    }, seconds)
+    await page.waitForTimeout(500)
+  } catch {
+    // No seekable video — capture whatever frame is showing
+  }
+}
+
+async function capture(browser, { slug, url, videoSeekSeconds }) {
   const context = await browser.newContext({ viewport: VIEWPORT, deviceScaleFactor: 2 })
   const page = await context.newPage()
   try {
@@ -55,6 +76,7 @@ async function capture(browser, { slug, url }) {
     // Extra settle time so hero images and web fonts finish rendering
     await page.waitForTimeout(SETTLE_MS)
     await dismissPopups(page)
+    if (videoSeekSeconds != null) await seekHeroVideo(page, videoSeekSeconds)
     const file = path.join(outDir, `${slug}-desktop.png`)
     await page.screenshot({ path: file })
     console.log(`✓ ${slug} → ${path.relative(process.cwd(), file)}`)
