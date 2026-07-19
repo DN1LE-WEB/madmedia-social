@@ -26,11 +26,9 @@ const caseStudies: CaseStudyData[] = [
     slug: 'isd2342',
     summary: 'A complete rebuild of the district’s website, designed for the families who visit it and the staff who keep it up to date.',
     features: [
-      'Easy content management so school staff can update pages themselves',
+      'A custom content management system so school staff can update pages themselves',
       'An AI-powered “Ask” assistant that answers visitor questions using the district’s own content',
       'Secure staff login with their existing Google accounts',
-      'District announcements automatically pulled in from their messaging system',
-      'An AI-assisted page builder for staff creating new content',
       'Fully accessible, meeting ADA standards for all visitors',
     ],
   },
