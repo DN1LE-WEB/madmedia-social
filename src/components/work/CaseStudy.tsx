@@ -15,6 +15,7 @@ interface CaseStudyProps extends CaseStudyData {
   imageExists: boolean
   flip?: boolean
   warm?: boolean
+  priority?: boolean
 }
 
 function ScreenshotFrame({
@@ -22,7 +23,8 @@ function ScreenshotFrame({
   slug,
   domain,
   imageExists,
-}: Pick<CaseStudyProps, 'name' | 'slug' | 'domain' | 'imageExists'>) {
+  priority,
+}: Pick<CaseStudyProps, 'name' | 'slug' | 'domain' | 'imageExists' | 'priority'>) {
   return (
     <div className="relative aspect-[16/10] overflow-hidden border border-primary/10 bg-white shadow-lg transition-all duration-500 group-hover:translate-y-[-4px] group-hover:shadow-xl">
       {imageExists ? (
@@ -30,6 +32,7 @@ function ScreenshotFrame({
           src={`/work/${slug}-desktop.png`}
           alt={`Homepage of the ${name} website`}
           fill
+          priority={priority}
           className="object-cover object-top"
           sizes="(min-width: 1024px) 50vw, 100vw"
         />
@@ -57,6 +60,7 @@ export function CaseStudy({
   imageExists,
   flip = false,
   warm = false,
+  priority = false,
 }: CaseStudyProps) {
   return (
     <section className={`py-section ${warm ? 'bg-background-warm' : ''}`}>
@@ -76,6 +80,7 @@ export function CaseStudy({
                 slug={slug}
                 domain={domain}
                 imageExists={imageExists}
+                priority={priority}
               />
             </a>
           </AnimateOnScroll>

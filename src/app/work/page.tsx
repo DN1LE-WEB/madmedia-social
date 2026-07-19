@@ -126,6 +126,7 @@ export default function WorkPage() {
           imageExists={screenshotExists(study.slug)}
           flip={index % 2 === 1}
           warm={index % 2 === 0}
+          priority={index === 0}
         />
       ))}
 
