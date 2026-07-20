@@ -26,7 +26,7 @@ const caseStudies: CaseStudyData[] = [
     slug: 'isd2342',
     summary: 'A complete rebuild of the district’s website, designed for the families who visit it and the staff who keep it up to date.',
     features: [
-      'A custom content management system so school staff can update pages themselves',
+      'A custom content management system',
       'An AI-powered “Ask” assistant that answers visitor questions using the district’s own content',
       'Secure staff login with their existing Google accounts',
       'Fully accessible, meeting ADA standards for all visitors',
@@ -53,7 +53,7 @@ const caseStudies: CaseStudyData[] = [
     slug: 'four-pawsresort',
     summary: 'A pet resort website with customer communication built right in.',
     features: [
-      'Professional email set up on their own domain',
+      'Custom scheduling request system',
       'Automated text message notifications to customers',
     ],
   },
