@@ -13,7 +13,7 @@ export function Hero() {
             <h1 className="font-display text-4xl md:text-6xl lg:text-7xl leading-[0.95] tracking-tight">
               MadMedia
               <br />
-              <span className="text-accent">Social Media That Works</span>
+              <span className="text-accent">Websites and Social That Work Together</span>
             </h1>
           </AnimateOnScroll>
 
@@ -45,7 +45,7 @@ export function Hero() {
             <h1 className="font-display text-5xl md:text-7xl lg:text-8xl leading-[0.9] tracking-tight text-white">
               MadMedia
               <br />
-              <span className="text-accent">Social Media That Works</span>
+              <span className="text-accent">Websites and Social That Work Together</span>
             </h1>
           </AnimateOnScroll>
 
