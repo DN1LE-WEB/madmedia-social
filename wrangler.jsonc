@@ -1,7 +1,18 @@
 {
   "name": "madmedia-social",
+  "main": "worker/index.ts",
   "compatibility_date": "2025-01-27",
   "assets": {
-    "directory": "./out"
+    "directory": "./out",
+    "binding": "ASSETS"
+  },
+  // RESEND_API_KEY is a secret: set it with `npx wrangler secret put RESEND_API_KEY`
+  "vars": {
+    // Comma-separated list of recipients
+    "CONTACT_TO": "madmedia56256@gmail.com, go@weblaunchpad.io",
+    "CONTACT_FROM": "MadMedia Website <contact@madmedia.social>"
+  },
+  "observability": {
+    "enabled": true
   }
 }
